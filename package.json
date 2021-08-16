@@ -1,0 +1,41 @@
+{
+    "name": "pin-generator",
+    "version": "1.0.0",
+    "description": "JavaScript library to generate random pin codes",
+    "author": "Eyuel Berga Woldemichael <eyuel.berga@yahoo.com>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eyuelberga/pin-generator.git"
+    },
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "license": "MIT",
+    "keywords": [
+        "Generator",
+        "Utility",
+        "Pin-code"
+    ],
+    "scripts": {
+        "prepare": "yarn build",
+        "prepublishOnly": "yarn test && yarn lint",
+        "preversion": "yarn lint",
+        "version": "yarn format && git add -A src",
+        "postversion": "git push && git push --tags",
+        "build": "tsc",
+        "format": "prettier --write",
+        "test": "jest --passWithNoTests",
+        "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=10"
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "devDependencies": {
+        "typescript": "^4.3.5",
+        "eslint": "^7.19.0",
+        "eslint-config-prettier": "7.2.0",
+        "eslint-plugin-prettier": "3.3.1",
+        "prettier": "2.2.1",
+        "ts-jest": "26.5.0",
+        "jest": "^26.6.3"
+    }
+}
