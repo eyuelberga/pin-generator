@@ -31,6 +31,7 @@ with an argument
 generatePin(6); // 6-digit pin
 
 ```
+Also see [CodeSandbox Demo](https://codesandbox.io/s/pin-generator-demo-nz841?file=/src/index.js) for a complete example
 
 ## License
 
